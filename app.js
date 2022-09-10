@@ -34,13 +34,13 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({ extended: true }));
 
+
+
+
 const connection = mongoose.connect(
 
-   "mongodb+srv://harshit123:harshit123@cluster0.g0qxvgz.mongodb.net/?retryWrites=true&w=majority"
 
-
-
-  ,
+`mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@@cluster0.g0qxvgz.mongodb.net/?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
